@@ -1,0 +1,36 @@
+Project Leadership & Operations 
+- Sprint Kumarn - Manager1-2
+- Milestone DST - Milestone Management - https://docs.google.com/spreadsheets/d/1QnkUdDcv5HduYNPQg3__1bGCbXnCSDsOKgE5rj_ELSY/edit?usp=sharing
+
+Narrative 
+- GDD Kumarn - Kumarn Compare backstory - Game Design Kumarn-Level - GameDesignBrakdown1
+- KhanKluay - KhanKluay-Concept1-4 
+
+Mechanics & Probability Design
+- JohnWickSlot - GameDesignGambling1 - https://docs.google.com/document/d/1D9H2UX8fC2efIBoMHTmNcTkV9hq47plfhC-AU-eM-vo/edit?usp=sharing
+
+Market Intelligence & Strategy
+- Research Reanimal - https://docs.google.com/presentation/d/1-_hK6gqyNwk6Ipk0eJAufhHt1T2ug4PwKQjuVFZHE9Y/edit?usp=sharing
+- Research LittleNightmares2 - https://docs.google.com/presentation/d/1yHX6UUGrVd1lR9XpC6XGOFFy1BR4EEAutv2o3PA3R_0/edit?usp=sharing
+- 2020 Top 100 Revenue Mobile game growth - https://docs.google.com/spreadsheets/d/1oXY-mj9lTXtRx0H0yD7h1qFVIcSx5yS-RTjIu9-uWSA/edit?usp=sharing
+- 2022 Top 100 Revenue Mobile game growth - https://docs.google.com/spreadsheets/d/1vksCCEjH6OwfkOWDxk7yXj-1LLpaMVTBFdpOq0X7qVU/edit?usp=sharing
+
+Predictive Market Viability
+- Forecast New Soul Land - https://docs.google.com/spreadsheets/d/1VKa2HEnaMNIYmheyPMbWyXr8rRq1AdB0I1hvKdSoYy8/edit?usp=sharing
+- Forecast Hunter x Hunter - https://docs.google.com/spreadsheets/d/1xNqc4RAeF6zUjU1iqg70iXTD_UE0yafA/edit?usp=sharing&ouid=109769012892924036747&rtpof=true&sd=true
+- Forecast LightOfHeaven - https://docs.google.com/spreadsheets/d/1TumCEOd0NzaPpeeSIeY_qhJcJNa2zhIW51Aw_pR-e30/edit?usp=sharing
+
+Product Assessment
+- GameTestingSheet - Evaluation_1 - https://docs.google.com/spreadsheets/d/14AEOeP89ob9K37PJcHEdJEavgZ67Z0xx0xSVNyqQGVU/edit?usp=sharing
+
+Quality Assurance
+- Tree of Savior (PC)- QA_TOS - https://docs.google.com/spreadsheets/d/1vx22FpK6X0UVvdE8H2cQWFJ97QdakGGY3h8WjGABGCw/edit?usp=sharing
+- Magia (Mobile) - LQA_Magia  - https://docs.google.com/spreadsheets/d/1PBusWzWlax4TrObcPXrB9rvgBZKrbLDsbBnVmlYc6UQ/edit?usp=sharing
+
+Web Solutions
+- Company Website Werebuff - https://www.werebuffstudio.com/
+
+
+
+
+

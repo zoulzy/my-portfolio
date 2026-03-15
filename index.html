@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitikan Buato - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">PB.<span>Port</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="Pitikan_Buato_Resume.pdf" class="btn-download" download>
+                    <i class="ri-download-2-line"></i> Resume
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="about" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hello, I'm <span class="gradient-text">Pitikan Buato</span></h1>
+            <p class="hero-subtitle">Game Designer, Researcher, and Project Manager</p>
+            <div class="resume-placeholder">
+                <p><strong>Professional Summary</strong></p>
+                <p class="editable-text" style="font-style: normal;">Results-oriented Lead Project Manager and Senior R&D Specialist with 8+ years of experience in the SEA gaming market.<br><br>Proven track record of generating over 30 million Baht in profit within two months through strategic game localization and publishing.<br><br>Expert in leveraging AI tools and Agile methodologies to drive cross-functional teams toward high-quality product delivery.</p>
+                <ul class="skills-list">
+                    <li>Project Leadership & Operations</li>
+                    <li>Narrative & World Building</li>
+                    <li>Mechanics & Probability Design</li>
+                    <li>Market Intelligence & Strategy</li>
+                    <li>Predictive Market Viability</li>
+                    <li>Product Assessment</li>
+                    <li>Quality Assurance</li>
+                    <li>Web Solutions</li>
+                </ul>
+            </div>
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn-primary">View My Work</a>
+                <a href="Pitikan_Buato_Resume.pdf" class="btn-secondary" download>
+                    <i class="ri-file-pdf-line"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-header">
+            <h2>Featured <span>Projects</span></h2>
+            <p>Explore my diverse range of experiences and capabilities</p>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="leadership">Leadership & Ops</button>
+            <button class="filter-btn" data-filter="narrative">Narrative</button>
+            <button class="filter-btn" data-filter="mechanics">Mechanics</button>
+            <button class="filter-btn" data-filter="market">Market Intelligence</button>
+            <button class="filter-btn" data-filter="predictive">Predictive Viability</button>
+            <button class="filter-btn" data-filter="assessment">Assessment & QA</button>
+            <button class="filter-btn" data-filter="web">Web Solutions</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolio-grid">
+            <!-- Project items will be dynamically injected by JavaScript -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pitikan Buato. All rights reserved.</p>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal"><i class="ri-close-line"></i></span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
