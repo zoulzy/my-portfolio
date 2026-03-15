@@ -167,10 +167,11 @@ function renderProjects(filterCategory = 'all') {
         }
 
         let viewBtnParams;
+        let linkParam = project.link ? `'${project.link}'` : 'null';
         if (project.gallery) {
-            viewBtnParams = `openModalGallery(${JSON.stringify(project.gallery).replace(/"/g, "&quot;")})`;
+            viewBtnParams = `openModalGallery(${JSON.stringify(project.gallery).replace(/"/g, "&quot;")}, ${linkParam})`;
         } else {
-            viewBtnParams = `openModal('${project.image}')`;
+            viewBtnParams = `openModal('${project.image}', ${linkParam})`;
         }
 
         card.innerHTML = `
@@ -212,16 +213,27 @@ const modalImg = document.getElementById("modal-img");
 const closeBtn = document.querySelector(".close-modal");
 const prevBtn = document.getElementById("modal-prev");
 const nextBtn = document.getElementById("modal-next");
+const extLinkBtn = document.getElementById("modal-ext-link");
 
 let currentGallery = [];
 let currentIndex = 0;
 
-function openModal(imgSrc) {
+function setupExternalLink(linkUrl) {
+    if (linkUrl && linkUrl !== 'null') {
+        extLinkBtn.href = linkUrl;
+        extLinkBtn.style.display = "inline-flex";
+    } else {
+        extLinkBtn.style.display = "none";
+    }
+}
+
+function openModal(imgSrc, linkUrl = null) {
     currentGallery = [];
     modal.style.display = "flex";
     modalImg.src = imgSrc;
     prevBtn.style.display = "none";
     nextBtn.style.display = "none";
+    setupExternalLink(linkUrl);
 
     setTimeout(() => {
         modalImg.style.transform = "scale(1)";
@@ -229,10 +241,11 @@ function openModal(imgSrc) {
     }, 10);
 }
 
-function openModalGallery(galleryArray) {
+function openModalGallery(galleryArray, linkUrl = null) {
     currentGallery = galleryArray;
     currentIndex = 0;
     modal.style.display = "flex";
+    setupExternalLink(linkUrl);
     updateModalImage();
     
     if (galleryArray.length > 1) {
