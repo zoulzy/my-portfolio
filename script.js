@@ -40,28 +40,15 @@ const portfolioData = [
         image: "Narrative & World Building/Kumarn/Kumarn Compare backstory.jpg"
     },
     {
-        title: "KhanKluay Concept 1",
+        title: "KhanKluay Concepts",
         category: "narrative",
         tag: "Narrative & World Building",
-        image: "Narrative & World Building/KhanKluay/KhanKlauy-Concept1.png"
-    },
-    {
-        title: "KhanKluay Concept 2",
-        category: "narrative",
-        tag: "Narrative & World Building",
-        image: "Narrative & World Building/KhanKluay/KhanKlauy-Concept2.png"
-    },
-    {
-        title: "KhanKluay Concept 3",
-        category: "narrative",
-        tag: "Narrative & World Building",
-        image: "Narrative & World Building/KhanKluay/KhanKlauy-Concept3.png"
-    },
-    {
-        title: "KhanKluay Concept 4",
-        category: "narrative",
-        tag: "Narrative & World Building",
-        image: "Narrative & World Building/KhanKluay/KhanKlauy-Concept4.png"
+        image: "Narrative & World Building/KhanKluay/KhanKlauy-Concept1.png",
+        gallery: [
+            "Narrative & World Building/KhanKluay/KhanKlauy-Concept1.png",
+            "Narrative & World Building/KhanKluay/KhanKlauy-Concept2.png",
+            "Narrative & World Building/KhanKluay/KhanKlauy-Concept3.png"
+        ]
     },
 
     // Mechanics
@@ -179,12 +166,19 @@ function renderProjects(filterCategory = 'all') {
                         </a>`;
         }
 
+        let viewBtnParams;
+        if (project.gallery) {
+            viewBtnParams = `openModalGallery(${JSON.stringify(project.gallery).replace(/"/g, "&quot;")})`;
+        } else {
+            viewBtnParams = `openModal('${project.image}')`;
+        }
+
         card.innerHTML = `
             <div class="card-image-wrapper">
                 <img src="${project.image}" alt="${project.title}" loading="lazy" class="card-img">
                 <div class="card-overlay">
-                    <button class="btn-view" onclick="openModal('${project.image}')">
-                        <i class="ri-eye-line"></i> View Image
+                    <button class="btn-view" onclick="${viewBtnParams}">
+                        <i class="ri-eye-line"></i> View
                     </button>
                     ${linkHTML}
                 </div>
@@ -216,18 +210,69 @@ filterButtons.forEach(btn => {
 const modal = document.getElementById("image-modal");
 const modalImg = document.getElementById("modal-img");
 const closeBtn = document.querySelector(".close-modal");
+const prevBtn = document.getElementById("modal-prev");
+const nextBtn = document.getElementById("modal-next");
+
+let currentGallery = [];
+let currentIndex = 0;
 
 function openModal(imgSrc) {
+    currentGallery = [];
     modal.style.display = "flex";
     modalImg.src = imgSrc;
-    // adding a tiny animation timeout
+    prevBtn.style.display = "none";
+    nextBtn.style.display = "none";
+
     setTimeout(() => {
         modalImg.style.transform = "scale(1)";
         modalImg.style.opacity = "1";
     }, 10);
 }
 
-closeBtn.onclick = function() {
+function openModalGallery(galleryArray) {
+    currentGallery = galleryArray;
+    currentIndex = 0;
+    modal.style.display = "flex";
+    updateModalImage();
+    
+    if (galleryArray.length > 1) {
+        prevBtn.style.display = "block";
+        nextBtn.style.display = "block";
+    }
+
+    setTimeout(() => {
+        modalImg.style.transform = "scale(1)";
+        modalImg.style.opacity = "1";
+    }, 10);
+}
+
+function updateModalImage() {
+    modalImg.style.opacity = "0.5";
+    setTimeout(() => {
+        modalImg.src = currentGallery[currentIndex];
+        modalImg.style.opacity = "1";
+    }, 150);
+}
+
+if(prevBtn && nextBtn) {
+    prevBtn.onclick = function(e) {
+        e.stopPropagation();
+        if (currentGallery.length > 0) {
+            currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+            updateModalImage();
+        }
+    }
+
+    nextBtn.onclick = function(e) {
+        e.stopPropagation();
+        if (currentGallery.length > 0) {
+            currentIndex = (currentIndex + 1) % currentGallery.length;
+            updateModalImage();
+        }
+    }
+}
+
+function closeModalAction() {
     modalImg.style.transform = "scale(0.95)";
     modalImg.style.opacity = "0";
     setTimeout(() => {
@@ -235,13 +280,13 @@ closeBtn.onclick = function() {
     }, 300);
 }
 
+closeBtn.onclick = function() {
+    closeModalAction();
+}
+
 window.onclick = function(event) {
     if (event.target == modal) {
-        modalImg.style.transform = "scale(0.95)";
-        modalImg.style.opacity = "0";
-        setTimeout(() => {
-            modal.style.display = "none";
-        }, 300);
+        closeModalAction();
     }
 }
 

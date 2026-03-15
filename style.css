@@ -474,8 +474,8 @@ h1, h2, h3, h4 {
 }
 
 .modal-content {
-    max-width: 90%;
-    max-height: 90vh;
+    max-width: 80%;
+    max-height: 85vh;
     border-radius: 8px;
     object-fit: contain;
     box-shadow: 0 0 50px rgba(0,0,0,0.5);
@@ -493,10 +493,34 @@ h1, h2, h3, h4 {
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s;
+    z-index: 2002;
 }
 
 .close-modal:hover {
     color: var(--accent-primary);
+}
+
+.modal-nav-btn {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 2001;
+    backdrop-filter: blur(4px);
+    margin: 0 20px;
+}
+
+.modal-nav-btn:hover {
+    background: var(--accent-primary);
+    transform: scale(1.1);
 }
 
 footer {
@@ -512,4 +536,13 @@ footer {
     .hero-actions { flex-direction: column; }
     .nav-links { display: none; }
     .portfolio-grid { grid-template-columns: 1fr; }
+    
+    .modal-nav-btn {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+    }
+    .modal-content {
+        max-width: 70%;
+    }
 }
