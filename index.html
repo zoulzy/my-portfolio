@@ -1,97 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pitikan Buato - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Screen Reader Announcements -->
+    <div
+      id="a11y-announcer"
+      class="sr-only"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
     <nav class="navbar">
-        <div class="nav-content">
-            <a href="#" class="logo">PB.<span>Port</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="Pitikan_Buato_Resume.pdf" class="btn-download" download>
-                    <i class="ri-download-2-line"></i> Resume
-                </a></li>
-            </ul>
-        </div>
+      <div class="nav-content">
+        <a href="#" class="logo">PB.<span>Port</span></a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li>
+            <a href="Pitikan_Buato_Resume.pdf" class="btn-download" download>
+              <i class="ri-download-2-line"></i> Resume
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <header id="about" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Hello, I'm <span class="gradient-text">Pitikan Buato</span></h1>
-            <p class="hero-subtitle">Game Designer, Researcher, and Project Manager</p>
-            <div class="resume-placeholder">
-                <p><strong>Professional Summary</strong></p>
-                <p class="editable-text" style="font-style: normal;">Results-oriented Lead Project Manager and Senior R&D Specialist with 8+ years of experience in the SEA gaming market.<br><br>Proven track record of generating over 30 million Baht in profit within two months through strategic game localization and publishing.<br><br>Expert in leveraging AI tools and Agile methodologies to drive cross-functional teams toward high-quality product delivery.</p>
-                <ul class="skills-list">
-                    <li>Project Leadership & Operations</li>
-                    <li>Narrative & World Building</li>
-                    <li>Mechanics & Probability Design</li>
-                    <li>Market Intelligence & Strategy</li>
-                    <li>Predictive Market Viability</li>
-                    <li>Product Assessment</li>
-                    <li>Quality Assurance</li>
-                    <li>Web Solutions</li>
-                </ul>
-            </div>
-            <div class="hero-actions">
-                <a href="#portfolio" class="btn-primary">View My Work</a>
-                <a href="Pitikan_Buato_Resume.pdf" class="btn-secondary" download>
-                    <i class="ri-file-pdf-line"></i> Download Resume
-                </a>
-            </div>
+      <div class="hero-content">
+        <h1 class="hero-title animate-in delay-1">
+          Hi, I'm <span class="highlight-text">Pitikan Buato</span>
+        </h1>
+        <p class="hero-subtitle animate-in delay-2">
+          Game Designer, Researcher, and Project Manager
+        </p>
+        <div class="about-card animate-in delay-3">
+          <p><strong>About Me</strong></p>
+          <p class="editable-text text-normal">
+            Results-oriented Lead Project Manager and Senior R&D Specialist with
+            8+ years of experience in the SEA gaming market.<br /><br />Proven
+            track record of generating over 30 million Baht in profit within two
+            months through strategic game localization and publishing.<br /><br />Expert
+            in leveraging AI tools and Agile methodologies to drive
+            cross-functional teams toward high-quality product delivery.
+          </p>
+          <ul class="skills-list">
+            <li>Project Leadership & Operations</li>
+            <li>Narrative & World Building</li>
+            <li>Mechanics & Probability Design</li>
+            <li>Market Intelligence & Strategy</li>
+            <li>Predictive Market Viability</li>
+            <li>Product Assessment</li>
+            <li>Quality Assurance</li>
+            <li>Web Solutions</li>
+          </ul>
         </div>
+        <div class="hero-actions animate-in delay-4">
+          <a href="#portfolio" class="btn-primary">View My Work</a>
+          <a href="Pitikan_Buato_Resume.pdf" class="btn-secondary" download>
+            <i class="ri-file-pdf-line" aria-hidden="true"></i> Download Resume
+            <span class="sr-only">(PDF document)</span>
+          </a>
+        </div>
+      </div>
     </header>
 
-    <section id="portfolio" class="portfolio-section">
-        <div class="section-header">
-            <h2>Featured <span>Projects</span></h2>
-            <p>Explore my diverse range of experiences and capabilities</p>
-        </div>
+    <main id="portfolio" class="portfolio-section">
+      <div class="section-header">
+        <h2>Selected <span>Work</span></h2>
+        <p>
+          A look at my recent projects across operations, design, and research.
+        </p>
+      </div>
 
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="leadership">Leadership & Ops</button>
-            <button class="filter-btn" data-filter="narrative">Narrative</button>
-            <button class="filter-btn" data-filter="mechanics">Mechanics</button>
-            <button class="filter-btn" data-filter="market">Market Intelligence</button>
-            <button class="filter-btn" data-filter="predictive">Predictive Viability</button>
-            <button class="filter-btn" data-filter="assessment">Assessment & QA</button>
-            <button class="filter-btn" data-filter="web">Web Solutions</button>
-        </div>
+      <div class="filters" role="group" aria-label="Portfolio Categories">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">
+          All
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="leadership"
+          aria-pressed="false"
+        >
+          Leadership & Ops
+        </button>
+        <button class="filter-btn" data-filter="narrative" aria-pressed="false">
+          Narrative
+        </button>
+        <button class="filter-btn" data-filter="mechanics" aria-pressed="false">
+          Mechanics
+        </button>
+        <button class="filter-btn" data-filter="market" aria-pressed="false">
+          Market Intelligence
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="predictive"
+          aria-pressed="false"
+        >
+          Predictive Viability
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="assessment"
+          aria-pressed="false"
+        >
+          Assessment & QA
+        </button>
+        <button class="filter-btn" data-filter="web" aria-pressed="false">
+          Web Solutions
+        </button>
+      </div>
 
-        <div class="portfolio-grid" id="portfolio-grid">
-            <!-- Project items will be dynamically injected by JavaScript -->
-        </div>
-    </section>
+      <div class="portfolio-grid" id="portfolio-grid">
+        <!-- Project items will be dynamically injected by JavaScript -->
+      </div>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Pitikan Buato. All rights reserved.</p>
+      <p>&copy; 2024 Pitikan Buato. All rights reserved.</p>
     </footer>
 
     <!-- Image Modal -->
-    <div id="image-modal" class="modal">
-        <span class="close-modal"><i class="ri-close-line"></i></span>
-        <button id="modal-prev" class="modal-nav-btn"><i class="ri-arrow-left-s-line"></i></button>
-        <img class="modal-content" id="modal-img">
-        <button id="modal-next" class="modal-nav-btn"><i class="ri-arrow-right-s-line"></i></button>
-        <div id="modal-footer">
-            <div id="caption"></div>
-            <a id="modal-ext-link" href="#" target="_blank" class="btn-primary modal-btn-ext" style="display: none;">
-                <i class="ri-external-link-line"></i> View more details
-            </a>
-        </div>
+    <div
+      id="image-modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image Viewer"
+    >
+      <button class="close-modal" aria-label="Close image viewer">
+        <i class="ri-close-line"></i>
+      </button>
+      <div class="modal-body">
+        <button
+          id="modal-prev"
+          class="modal-nav-btn"
+          aria-label="Previous image"
+        >
+          <i class="ri-arrow-left-s-line" aria-hidden="true"></i>
+        </button>
+        <img class="modal-content" id="modal-img" alt="Project Preview" />
+        <button id="modal-next" class="modal-nav-btn" aria-label="Next image">
+          <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div id="modal-footer">
+        <div id="caption"></div>
+        <a
+          id="modal-ext-link"
+          href="#"
+          target="_blank"
+          class="btn-primary modal-btn-ext hidden"
+        >
+          <i class="ri-external-link-line" aria-hidden="true"></i> Open project
+          link <span class="sr-only">(opens in a new tab)</span>
+        </a>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
